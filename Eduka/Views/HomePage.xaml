@@ -30,8 +30,8 @@
                                     <Grid>
                                         <Image Source="coral.png" Aspect="AspectFill"/>
                                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                                            <Image Source="tab_about.png" Aspect="AspectFit"/>
-                                            <Label Text="Unit" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                            <Image Source="unit.png" Aspect="AspectFit" HeightRequest="100"/>
+                                            <Label Text="Unit" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
                                         </StackLayout>
                                     </Grid>
                                 </Frame>
@@ -43,8 +43,8 @@
                                         <Image Source="purple.png" Aspect="AspectFill"/>
 
                                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                                            <Image Source="tab_about.png" Aspect="AspectFit"/>
-                                            <Label Text="Kuiz" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                            <Image Source="quiz.png" Aspect="AspectFit"  HeightRequest="100"/>
+                                            <Label Text="Kuiz" TextColor="White"  HorizontalTextAlignment="Center"  FontAttributes="Bold" FontSize="Large"/>
                                         </StackLayout>
 
                                     </Grid>
@@ -58,8 +58,8 @@
                                         <Image Source="purple.png" Aspect="AspectFill"/>
 
                                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                                            <Image Source="tab_about.png" Aspect="AspectFit"/>
-                                            <Label Text="Peta minda" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                            <Image Source="peta.png" Aspect="AspectFit"  HeightRequest="100"/>
+                                            <Label Text="Peta minda" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
                                         </StackLayout>
 
                                     </Grid>
@@ -73,8 +73,8 @@
                                          <Image Source="coral.png" Aspect="AspectFill"/>
 
                                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                                            <Image Source="tab_about.png" Aspect="AspectFit"/>
-                                            <Label Text="Video" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                            <Image Source="video.png" Aspect="AspectFit"  HeightRequest="100"/>
+                                            <Label Text="Video" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
                                         </StackLayout>
 
                                     </Grid>
@@ -88,8 +88,8 @@
                                 <Grid>
                                     <Image Source="bgc.png" Aspect="AspectFill"/>
                                     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                                        <Image Source="tab_about.png" Aspect="AspectFit"/>
-                                        <Label Text="Permainan" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                        <Image Source="game.png" Aspect="AspectFit"   HeightRequest="100"/>
+                                        <Label Text="Permainan" Margin="0,-15,0,0" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
                                     </StackLayout>
                                 </Grid>
                             </Frame>

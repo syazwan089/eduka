@@ -40,7 +40,7 @@
 
 
     <FlyoutItem Title="Home"
-                Icon="cat.png">
+                Icon="home.png">
         <Tab>
             <ShellContent>
                 <local:HomePage />
