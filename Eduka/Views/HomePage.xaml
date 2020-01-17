@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Eduka.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            <ScrollView>
+                <StackLayout>
+
+                    <StackLayout Margin="10">
+                        <Grid HorizontalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                      
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+                                <Frame BackgroundColor="AliceBlue" HeightRequest="200" CornerRadius="20" Padding="0">
+                                    <Grid>
+                                        <Image Source="coral.png" Aspect="AspectFill"/>
+                                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Image Source="tab_about.png" Aspect="AspectFit"/>
+                                            <Label Text="Unit" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2">
+                                <Frame BackgroundColor="AliceBlue" CornerRadius="20"  HeightRequest="200" Padding="0">
+                                    <Grid>
+                                        <Image Source="purple.png" Aspect="AspectFill"/>
+
+                                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Image Source="tab_about.png" Aspect="AspectFit"/>
+                                            <Label Text="Kuiz" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                        </StackLayout>
+
+                                    </Grid>
+                                    
+                                </Frame>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                                <Frame BackgroundColor="AliceBlue" CornerRadius="20"  HeightRequest="200" Padding="0">
+                                    <Grid>
+                                        <Image Source="purple.png" Aspect="AspectFill"/>
+
+                                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Image Source="tab_about.png" Aspect="AspectFit"/>
+                                            <Label Text="Peta minda" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                        </StackLayout>
+
+                                    </Grid>
+                                    
+                                </Frame>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="3">
+                                <Frame BackgroundColor="AliceBlue" CornerRadius="20"  HeightRequest="200" Padding="0">
+                                    <Grid>
+                                         <Image Source="coral.png" Aspect="AspectFill"/>
+
+                                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Image Source="tab_about.png" Aspect="AspectFit"/>
+                                            <Label Text="Video" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                        </StackLayout>
+
+                                    </Grid>
+                                   
+                                </Frame>
+                            </StackLayout>
+
+                        </Grid>
+                        <StackLayout>
+                            <Frame BackgroundColor="AliceBlue" CornerRadius="20"  HeightRequest="150" Padding="0">
+                                <Grid>
+                                    <Image Source="bgc.png" Aspect="AspectFill"/>
+                                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                        <Image Source="tab_about.png" Aspect="AspectFit"/>
+                                        <Label Text="Permainan" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                    </StackLayout>
+
+              
+                    
+                    
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
