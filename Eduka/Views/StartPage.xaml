@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Eduka.ViewModels"
+             mc:Ignorable="d"
+             x:Class="Eduka.Views.StartPage">
+    <ContentPage>
+        <Grid>
+            <StackLayout Margin="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image x:Name="im_1" Aspect="AspectFit" HeightRequest="350" HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="label_1" HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+            <Label Text="1/3" HorizontalOptions="CenterAndExpand"  VerticalOptions="End" />
+        </Grid>
+
+    </ContentPage>
+
+    <ContentPage>
+        <Grid>
+            <StackLayout Margin="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image x:Name="im_2" Aspect="AspectFit" HeightRequest="350" HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="label_2" HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+            <Label Text="2/3" HorizontalOptions="CenterAndExpand"  VerticalOptions="End" />
+        </Grid>
+    </ContentPage>
+
+    <ContentPage BackgroundColor="#86ED98">
+        <Grid>
+            <StackLayout Margin="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image x:Name="im_3" Aspect="AspectFit" HeightRequest="350" HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="label_3" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="End">
+                <Button Text="Mula" TextColor="DarkGray" BackgroundColor="White" CornerRadius="20" Margin="20,20" Clicked="Button_Clicked" />
+            </StackLayout>
+
+
+
+        </Grid>
+    </ContentPage>
+</CarouselPage>

@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Eduka.Services;
 using Eduka.Views;
+using Xamarin.Essentials;
 
 namespace Eduka
 {
@@ -11,8 +12,17 @@ namespace Eduka
 
         public App()
         {
-            InitializeComponent();    
-            MainPage = new AppShell();
+            InitializeComponent();
+            DependencyService.Register<IAuth, Auth>();
+            if (!String.IsNullOrEmpty(Preferences.Get("userid", "")))
+            {
+                MainPage = new AppShell();
+            }
+
+            else
+            {
+                MainPage = new NavigationPage(new StartPage());
+            }
         }
 
         protected override void OnStart()
