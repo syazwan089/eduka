@@ -6,6 +6,87 @@
              mc:Ignorable="d"
              x:Class="Eduka.App">
     <Application.Resources>
-        
+
+        <Style TargetType="StackLayout" x:Key="Main-Stack-Gray">
+            <Setter Property="BackgroundColor" Value="#F3F3F3"/>
+        </Style>
+
+        <Style TargetType="Frame" x:Key="Main-Frame-White">
+            <Setter Property="BackgroundColor" Value="#F3F3F3"/>
+        </Style>
+
+
+        <Style TargetType="Label" x:Key="Main-Title-Blue">
+            <Setter Property="TextColor" Value="#515C6F"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="Sub-Title-Blue">
+            <Setter Property="TextColor" Value="#1A9CFF"/>
+            <Setter Property="FontSize" Value="Small"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="Sub-Title-Gray">
+            <Setter Property="TextColor" Value="#515C6F"/>
+            <Setter Property="FontSize" Value="Small"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="Main-Title-Gray">
+            <Setter Property="TextColor" Value="#515C6F"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="Btn-Main">
+            <Setter Property="BackgroundColor" Value="#1A9CFF"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+
+
+        <Style TargetType="Button" x:Key="Button-Main-Blue">
+            <Setter Property="BackgroundColor" Value="#1A9CFF"/>
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="Button-Secondary-Blue">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="BorderColor" Value="#1A9CFF"/>
+            <Setter Property="BorderWidth" Value="2"/>
+            <Setter Property="TextColor" Value="#1A9CFF" />
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+
+
+        <OnPlatform x:TypeArguments="x:String" 
+                x:Key="FontAwesomeBrands">
+            <On Platform="Android" 
+          Value="FontAwesome5Brands.otf#Regular" />
+            <On Platform="iOS" 
+          Value="FontAwesome5Brands-Regular" />
+            <On Platform="UWP" 
+          Value="/Assets/FontAwesome5Brands.otf#Font Awesome 5 Brands" />
+        </OnPlatform>
+
+        <OnPlatform x:TypeArguments="x:String" 
+                x:Key="FontAwesomeSolid">
+            <On Platform="Android" 
+          Value="FontAwesome5Solid.otf#Regular" />
+            <On Platform="iOS" 
+          Value="FontAwesome5Free-Solid" />
+            <On Platform="UWP" 
+          Value="/Assets/FontAwesome5Solid.otf#Font Awesome 5 Free" />
+        </OnPlatform>
+
+        <OnPlatform x:TypeArguments="x:String" 
+                x:Key="FontAwesomeRegular">
+            <On Platform="Android" 
+          Value="FontAwesome5Regular.otf#Regular" />
+            <On Platform="iOS" 
+          Value="FontAwesome5Free-Regular" />
+            <On Platform="UWP" 
+          Value="/Assets/FontAwesome5Regular.otf#Font Awesome 5 Free" />
+        </OnPlatform>
     </Application.Resources>
 </Application>

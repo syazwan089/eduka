@@ -10,10 +10,48 @@
         <local:LoginViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Style="{StaticResource Main-Stack-Gray}">
+
+            <StackLayout Margin="15,80,0,0">
+                <Label Text="Log masuk" Style="{StaticResource  Main-Title-Blue}"/>
+            </StackLayout>
+
+            <StackLayout Margin="15">
+                <Frame BackgroundColor="White"  BorderColor="Transparent" HasShadow="False">
+                    <StackLayout Margin="5">
+                        <StackLayout Padding="0" >
+                            <Label Text="ID Pelajar" Style="{StaticResource Sub-Title-Blue}" Margin="0"/>
+                            <Entry Text="{Binding userId}" Placeholder="example@exple.com" TextColor="Gray" Margin="0,-16,0,10" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="Kata Laluan" Style="{StaticResource Sub-Title-Blue}" Margin="0"/>
+                            <Entry Text="{Binding Password}" IsPassword="True"  Placeholder="*******" TextColor="Gray" Margin="0,-16,0,10" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout IsVisible="{Binding  IsRunning}">
+                            <ActivityIndicator Color="#4AD69E" IsRunning="True"/>
+                        </StackLayout>
+
+                        <StackLayout IsVisible="{Binding  isBtnEnable}">
+                            
+                            <Button Text="sign in" Command="{Binding  LoginCommand}" Style="{StaticResource Btn-Main}"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="10" HorizontalOptions="CenterAndExpand">
+                <Label Text="Masih belum ada akaun?" TextColor="Gray" HorizontalTextAlignment="Center" FontSize="Small"/>
+                <Label Text="Daftar sekarang" HorizontalTextAlignment="Center" Style="{StaticResource Sub-Title-Blue}" FontAttributes="Bold" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+          
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

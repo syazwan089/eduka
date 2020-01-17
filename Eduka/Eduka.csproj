@@ -6,6 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\micro.png" />
+    <None Remove="Assets\Images\neutron.png" />
+    <None Remove="Assets\Images\otak.png" />
+    <None Remove="Assets\Images\uji.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\micro.png" />
+    <EmbeddedResource Include="Assets\Images\neutron.png" />
+    <EmbeddedResource Include="Assets\Images\otak.png" />
+    <EmbeddedResource Include="Assets\Images\uji.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991477" />  
