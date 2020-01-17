@@ -50,7 +50,7 @@
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="dog"
+    <FlyoutItem Title="My Result"
                 Icon="cat.png">
         <Tab>
             <ShellContent>
@@ -59,7 +59,7 @@
         </Tab>
     </FlyoutItem>
 
-    <ShellContent Title="About"
+    <ShellContent Title="Logout"
                   Icon="tab_about.png"
                   ContentTemplate="{DataTemplate local:HomePage}" />
 
