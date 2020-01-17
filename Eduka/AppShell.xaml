@@ -31,9 +31,11 @@
 
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <Grid HeightRequest="200">
-                <StackLayout>
-                    
+            <Grid Padding="0" HeightRequest="200">
+                <StackLayout Margin="0" Padding="0">
+                    <Frame Padding="0" HeightRequest="200">
+                        <Image Source="bgc.png" Aspect="AspectFill"/>
+                    </Frame>
                 </StackLayout></Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>

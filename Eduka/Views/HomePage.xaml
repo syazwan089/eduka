@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Eduka.ViewModels"
              mc:Ignorable="d"
              x:Class="Eduka.Views.HomePage">
+    <ContentPage.BindingContext>
+        <local:HomeViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="5">
             <ScrollView>
@@ -25,8 +29,12 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
+                            <!--   Unit Page   -->
                             <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
                                 <Frame BackgroundColor="AliceBlue" HeightRequest="200" CornerRadius="20" Padding="0">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding UnitCommand}"/>
+                                    </Frame.GestureRecognizers>
                                     <Grid>
                                         <Image Source="coral.png" Aspect="AspectFill"/>
                                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
@@ -39,6 +47,9 @@
 
                             <StackLayout Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2">
                                 <Frame BackgroundColor="AliceBlue" CornerRadius="20"  HeightRequest="200" Padding="0">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding QuizCommand}"/>
+                                    </Frame.GestureRecognizers>
                                     <Grid>
                                         <Image Source="purple.png" Aspect="AspectFill"/>
 
@@ -54,6 +65,9 @@
 
                             <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
                                 <Frame BackgroundColor="AliceBlue" CornerRadius="20"  HeightRequest="200" Padding="0">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding PetaCommand}"/>
+                                    </Frame.GestureRecognizers>
                                     <Grid>
                                         <Image Source="purple.png" Aspect="AspectFill"/>
 
@@ -69,6 +83,9 @@
 
                             <StackLayout Grid.Row="1" Grid.Column="2"  Grid.ColumnSpan="3">
                                 <Frame BackgroundColor="AliceBlue" CornerRadius="20"  HeightRequest="200" Padding="0">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding VideoCommand}"/>
+                                    </Frame.GestureRecognizers>
                                     <Grid>
                                          <Image Source="coral.png" Aspect="AspectFill"/>
 
@@ -85,6 +102,9 @@
                         </Grid>
                         <StackLayout>
                             <Frame BackgroundColor="AliceBlue" CornerRadius="20"  HeightRequest="150" Padding="0">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding GameCommand}"/>
+                                </Frame.GestureRecognizers>
                                 <Grid>
                                     <Image Source="bgc.png" Aspect="AspectFill"/>
                                     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">

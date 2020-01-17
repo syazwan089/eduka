@@ -6,10 +6,54 @@
              mc:Ignorable="d"
              x:Class="Eduka.Views.Games.GameSelectionPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="10">
+
+            <StackLayout>
+                <Label Text="Permainan" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Margin="0,20">
+                <StackLayout>
+
+                    <StackLayout Margin="0,5">
+                        <Frame BackgroundColor="AliceBlue" Padding="0" HeightRequest="160"  CornerRadius="30">
+                            <Grid>
+                                <Image Source="blue.png" Aspect="AspectFill"/>
+
+                                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Label Text="Sain Bahan" TextColor="White" FontAttributes="Bold" FontSize="26" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Margin="0,5">
+                        <Frame BackgroundColor="AliceBlue" Padding="0" HeightRequest="160" CornerRadius="30">
+                            <Grid>
+                                <Image Source="green.png" Aspect="AspectFill"/>
+
+                                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Label Text="Sain Fizikal" TextColor="White" FontAttributes="Bold" FontSize="26" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Margin="0,5">
+                        <Frame BackgroundColor="AliceBlue" Padding="0" HeightRequest="160"  CornerRadius="30">
+                            <Grid>
+                                <Image Source="pured.png" Aspect="AspectFill"/>
+
+                                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Label Text="Sain Hayat" TextColor="White" FontAttributes="Bold" FontSize="26" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
