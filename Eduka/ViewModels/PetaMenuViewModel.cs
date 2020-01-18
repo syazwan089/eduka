@@ -6,12 +6,12 @@ using Xamarin.Forms;
 
 namespace Eduka.ViewModels
 {
-    public class VideoSelectionViewModel : INotifyPropertyChanged
+    class PetaMenuViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
         public Command goToCommand { get; set; }
-        public VideoSelectionViewModel()
+
+        public PetaMenuViewModel(string id)
         {
             goToCommand = new Command(gotoPage);
         }
