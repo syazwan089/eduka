@@ -14,6 +14,7 @@ namespace Eduka
         {
             InitializeComponent();
             DependencyService.Register<IAuth, Auth>();
+            DependencyService.Register<IRestApi, RestApi>();
             if (!String.IsNullOrEmpty(Preferences.Get("userid", "")))
             {
                 MainPage = new AppShell();

@@ -6,10 +6,36 @@
              mc:Ignorable="d"
              x:Class="Eduka.Views.Peta.PetaMenuPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="5">
+            <ScrollView>
+                <StackLayout>
+
+                    <CollectionView ItemsSource="{Binding LPeta}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+
+                                <StackLayout Margin="10,10">
+                               
+                                    <Frame Padding="0" Margin="0" HasShadow="True" CornerRadius="20" HeightRequest="150">
+                                        <StackLayout>
+                                            <Frame Padding="0" BackgroundColor="DarkBlue" Margin="0" HeightRequest="110">
+                                                <Image Source="{Binding peta_image}" Aspect="AspectFill" />
+                                            </Frame>
+                                            <Label Margin="10,0" Text="{Binding peta_title}" TextColor="DarkSlateGray" FontSize="Medium" FontAttributes="Bold"/>
+                                        </StackLayout>
+                                       
+                                    </Frame>
+                                    
+                                </StackLayout>
+                                
+                                
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    
+                    
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
