@@ -6,10 +6,38 @@
              mc:Ignorable="d"
              x:Class="Eduka.Views.Quiz.QuizMenuPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="5" BackgroundColor="LightGray">
+            <ScrollView>
+                <StackLayout>
+
+
+                    <CollectionView ItemsSource="{Binding Topic}">
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+                                <StackLayout Margin="20,0">
+                                    <StackLayout Margin="20,10">
+                                        <Frame Padding="0"  BackgroundColor="White" HasShadow="True" HeightRequest="60">
+
+                                            <Label Text="{Binding quiz_name}" Margin="10,0" TextColor="Black" FontSize="Medium" VerticalTextAlignment="Center"/>
+
+                                        </Frame>
+
+
+                                    </StackLayout>
+                                </StackLayout>
+                               
+                                
+                                
+                            </DataTemplate>
+                            
+                        </CollectionView.ItemTemplate>
+                        
+                    </CollectionView>
+                    
+                    
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

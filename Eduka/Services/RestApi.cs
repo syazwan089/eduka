@@ -34,5 +34,73 @@ namespace Eduka.Services
             return null;
         }
 
+        public async Task<List<topic>> GetQuiz(string topic_id)
+        {
+            string WowURL = base_url + "get/quiz";
+            string DIRECT_POST_CONTENT_TYPE = "application/x-www-form-urlencoded";
+
+            HttpClient client = new HttpClient();
+            string postData = "topic_id=" + topic_id;
+
+            StringContent content = new StringContent(postData, Encoding.UTF8, DIRECT_POST_CONTENT_TYPE);
+            HttpResponseMessage response = await client.PostAsync(WowURL, content);
+
+            string result = await response.Content.ReadAsStringAsync();
+
+
+            if (result != null)
+            {
+                var json = JsonConvert.DeserializeObject<List<topic>>(result);
+                return json;
+            }
+
+            return null;
+        }
+
+        public async Task<List<Soalan>> GetQuizSet(string Quiz_Id)
+        {
+            string WowURL = base_url + "get/quiz/soalan";
+            string DIRECT_POST_CONTENT_TYPE = "application/x-www-form-urlencoded";
+
+            HttpClient client = new HttpClient();
+            string postData = "quiz_id=" + Quiz_Id;
+
+            StringContent content = new StringContent(postData, Encoding.UTF8, DIRECT_POST_CONTENT_TYPE);
+            HttpResponseMessage response = await client.PostAsync(WowURL, content);
+
+            string result = await response.Content.ReadAsStringAsync();
+
+
+            if (result != null)
+            {
+                var json = JsonConvert.DeserializeObject<List<Soalan>>(result);
+                return json;
+            }
+
+            return null;
+        }
+
+        public async Task<List<video>> GetVideo(string Topic_id)
+        {
+            string WowURL = base_url + "get/video/";
+            string DIRECT_POST_CONTENT_TYPE = "application/x-www-form-urlencoded";
+
+            HttpClient client = new HttpClient();
+            string postData = "topic_id=" + Topic_id;
+
+            StringContent content = new StringContent(postData, Encoding.UTF8, DIRECT_POST_CONTENT_TYPE);
+            HttpResponseMessage response = await client.PostAsync(WowURL, content);
+
+            string result = await response.Content.ReadAsStringAsync();
+
+
+            if (result != null)
+            {
+                var json = JsonConvert.DeserializeObject<List<video>>(result);
+                return json;
+            }
+
+            return null;
+        }
     }
 }

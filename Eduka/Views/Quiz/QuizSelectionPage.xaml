@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Eduka.ViewModels"
              mc:Ignorable="d"
              x:Class="Eduka.Views.Quiz.QuizSelectionPage">
+    <ContentPage.BindingContext>
+        <local:QuizSelectionViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Margin="10">
 
@@ -16,6 +20,9 @@
 
                     <StackLayout Margin="0,5">
                         <Frame BackgroundColor="AliceBlue" Padding="0" HeightRequest="160"  CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goToCommand}" CommandParameter="3"/>
+                            </Frame.GestureRecognizers>
                             <Grid>
                                 <Image Source="blue.png" Aspect="AspectFill"/>
 
@@ -28,6 +35,9 @@
 
                     <StackLayout Margin="0,5">
                         <Frame BackgroundColor="AliceBlue" Padding="0" HeightRequest="160" CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goToCommand}" CommandParameter="2"/>
+                            </Frame.GestureRecognizers>
                             <Grid>
                                 <Image Source="green.png" Aspect="AspectFill"/>
 
@@ -40,6 +50,9 @@
 
                     <StackLayout Margin="0,5">
                         <Frame BackgroundColor="AliceBlue" Padding="0" HeightRequest="160"  CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding goToCommand}" CommandParameter="1"/>
+                            </Frame.GestureRecognizers>
                             <Grid>
                                 <Image Source="pured.png" Aspect="AspectFill"/>
 
