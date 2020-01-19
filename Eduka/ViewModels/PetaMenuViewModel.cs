@@ -1,5 +1,6 @@
 ﻿using Eduka.Models;
 using Eduka.Services;
+using Eduka.Views.Peta;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,25 @@ namespace Eduka.ViewModels
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LPeta"));
             }
         }
+
+
+        private Peta SelectedItem;
+
+        public Peta selectedItem
+        {
+            get { return SelectedItem; }
+            set { SelectedItem = value;
+            
+                if(SelectedItem != null)
+                {
+                    PetaView page = new PetaView();
+                    page.BindingContext = new PetaViewViewModel(SelectedItem.peta_image);
+                    App.Current.MainPage.Navigation.PushAsync(page);
+                }
+
+            }
+        }
+
 
 
         public PetaMenuViewModel(string id)

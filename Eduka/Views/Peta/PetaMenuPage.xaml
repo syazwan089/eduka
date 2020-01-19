@@ -10,7 +10,7 @@
             <ScrollView>
                 <StackLayout>
 
-                    <CollectionView ItemsSource="{Binding LPeta}">
+                    <CollectionView ItemsSource="{Binding LPeta}" SelectedItem="{Binding selectedItem}" SelectionMode="Single">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
 
