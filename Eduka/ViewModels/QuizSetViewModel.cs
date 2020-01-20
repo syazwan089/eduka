@@ -122,7 +122,7 @@ namespace Eduka.ViewModels
 
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Question End", $"Your result is {markah} / {Total + 1}", "Okay");
+                    App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
                 }
 
             }
@@ -137,7 +137,7 @@ namespace Eduka.ViewModels
 
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Question End", $"Your result is {markah} / {Total + 1}", "Okay");
+                    App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
                 }
             }
         }
@@ -156,7 +156,7 @@ namespace Eduka.ViewModels
 
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Question End", $"Your result is {markah} / {Total + 1}", "Okay");
+                    App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
                 }
             }
 
@@ -170,7 +170,7 @@ namespace Eduka.ViewModels
 
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Question End", $"Your result is {markah} / {Total + 1}", "Okay");
+                    App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
                 }
             }
         }
@@ -189,7 +189,7 @@ namespace Eduka.ViewModels
 
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Question End", $"Your result is {markah} / {Total+1}", "Okay");
+                    App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
                 }
             }
 
@@ -203,7 +203,7 @@ namespace Eduka.ViewModels
 
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Question End", $"Your result is {markah} / {Total + 1}", "Okay");
+                    App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
                 }
             }
         }

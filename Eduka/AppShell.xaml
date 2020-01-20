@@ -59,6 +59,15 @@
         </Tab>
     </FlyoutItem>
 
+    <FlyoutItem Title="Pengumuman"
+                Icon="cat.png">
+        <Tab>
+            <ShellContent>
+                <local:NewsPage />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
     <ShellContent Title="Logout"
                   Icon="tab_about.png"
                   ContentTemplate="{DataTemplate local:HomePage}" />
