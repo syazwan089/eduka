@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eduka.Views.Video;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -19,6 +20,11 @@ namespace Eduka.ViewModels
         private void gotoPage(object obj)
         {
             string page = obj.ToString();
+
+            VideoMenuPage view = new VideoMenuPage();
+            view.BindingContext = new VideoMenuViewModel(page);
+            App.Current.MainPage.Navigation.PushAsync(view);
+
         }
     }
 }

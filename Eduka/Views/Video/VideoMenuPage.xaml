@@ -6,10 +6,35 @@
              mc:Ignorable="d"
              x:Class="Eduka.Views.Video.VideoMenuPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <ScrollView  BackgroundColor="LightGray">
+            <StackLayout Margin="5">
+
+
+                <CollectionView ItemsSource="{Binding Videos}" EmptyView="No item" SelectedItem="{Binding SelectedItem}" SelectionMode="Single">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+
+
+                            <StackLayout BackgroundColor="LightGray">
+                                <Frame  Margin="5"  BackgroundColor="White">
+                                    <StackLayout VerticalOptions="CenterAndExpand" Margin="5">
+                                        <Label Text="{Binding video_title}" FontSize="Medium" />
+                                        <Label Text="{ Binding video_desc}" FontSize="Small"/>
+                                       
+                                    </StackLayout>
+                                </Frame>
+                              
+                            </StackLayout>
+                            
+                            
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                
+                
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>
