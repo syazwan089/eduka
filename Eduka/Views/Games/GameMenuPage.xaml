@@ -3,13 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Eduka.ViewModels"
              mc:Ignorable="d"
              x:Class="Eduka.Views.Games.GameMenuPage">
+    <ContentPage.BindingContext>
+        <local:GameMenuViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <Frame BackgroundColor="White" Padding="0" HeightRequest="100">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding goToCommand}" CommandParameter="https://balmasic.000webhostapp.com/assets/unity/gamesatu/index.html"/>
+                    </Frame.GestureRecognizers>
+                    <Label Margin="10" Text="Benda hidup dan bukan hidup" VerticalTextAlignment="Center" FontSize="Medium"/>
+                </Frame>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
