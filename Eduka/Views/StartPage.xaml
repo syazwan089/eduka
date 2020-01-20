@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:Eduka.ViewModels"
              mc:Ignorable="d"
              x:Class="Eduka.Views.StartPage">
-    <ContentPage>
-        <Grid>
-            <StackLayout Margin="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+    <ContentPage  BackgroundColor="White">
+        <Grid  BackgroundColor="White">
+            <StackLayout Margin="20" BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Image x:Name="im_1" Aspect="AspectFit" HeightRequest="350" HorizontalOptions="CenterAndExpand"/>
                 <Label x:Name="label_1" HorizontalOptions="CenterAndExpand"/>
 
@@ -18,9 +18,9 @@
 
     </ContentPage>
 
-    <ContentPage>
-        <Grid>
-            <StackLayout Margin="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+    <ContentPage  BackgroundColor="White">
+        <Grid  BackgroundColor="White">
+            <StackLayout Margin="20" BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Image x:Name="im_2" Aspect="AspectFit" HeightRequest="350" HorizontalOptions="CenterAndExpand"/>
                 <Label x:Name="label_2" HorizontalOptions="CenterAndExpand"/>
 

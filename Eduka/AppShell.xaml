@@ -70,7 +70,7 @@
 
     <ShellContent Title="Logout"
                   Icon="tab_about.png"
-                  ContentTemplate="{DataTemplate local:HomePage}" />
+                  ContentTemplate="{DataTemplate local:Logout}" />
 
 
 </Shell>
