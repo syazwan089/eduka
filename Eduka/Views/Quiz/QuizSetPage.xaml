@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Eduka.Views.Quiz.QuizSetPage">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+                <Label Text="Soalan Tamat" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" x:Name="la" IsVisible="False"/>
+                <StackLayout x:Name="main" IsVisible="True">
+
+                    <StackLayout>
+                        <Image  Source="{Binding Soalan.task_image}" HeightRequest="400" x:Name="SoalanImage"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Start" Margin="10,0">
+                        <Label Text="{Binding Soalan.task_question}" x:Name="SoalanTitle" FontSize="Large"/>
+
+                    </StackLayout>
+                    <StackLayout Margin="10,0">
+                        <Button Text="{Binding Soalan.task_answers_a}" x:Name="AnsA" Command="{Binding A}" CommandParameter="{Binding Soalan.task_answers_a}"/>
+                        <Button  Text="{Binding Soalan.task_answers_b}" x:Name="AnsB" Command="{Binding B}" CommandParameter="{Binding Soalan.task_answers_b}"/>
+                        <Button  Text="{Binding Soalan.task_answers_c}" x:Name="AnsC" Command="{Binding C}" CommandParameter="{Binding Soalan.task_answers_c}"/>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="End" HorizontalOptions="Center">
+                        <Label Text="" x:Name="NoSoalan"/>
+                    </StackLayout>
+                    <!-- <ActivityIndicator Color="CadetBlue" IsRunning="True" IsVisible="True" x:Name="ActivitiIndicator" />-->
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,5 +1,6 @@
 ﻿using Eduka.Models;
 using Eduka.Services;
+using Eduka.Views.Quiz;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,10 +26,30 @@ namespace Eduka.ViewModels
         }
 
 
+        private topic SelectedItem;
+
+        public topic selectedItem
+        {
+            get { return SelectedItem; }
+            set { SelectedItem = value;
+            if(selectedItem !=null)
+                {
+                    QuizSetPage page = new QuizSetPage();
+                    page.BindingContext = new QuizSetViewModel(selectedItem.quiz_id);
+                    App.Current.MainPage.Navigation.PushAsync(page);
+                }
+            }
+        }
+
+
+
         public QuizMenuViewModel(string id)
         {
             GetQuiz(id);
+           
         }
+
+  
 
         private async Task GetQuiz(string id)
         {

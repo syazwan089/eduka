@@ -11,7 +11,7 @@
                 <StackLayout>
 
 
-                    <CollectionView ItemsSource="{Binding Topic}">
+                    <CollectionView ItemsSource="{Binding Topic}" SelectedItem="{Binding selectedItem}" SelectionMode="Single">
                         <CollectionView.ItemTemplate>
 
                             <DataTemplate>
