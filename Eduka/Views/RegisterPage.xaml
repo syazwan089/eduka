@@ -10,10 +10,36 @@
         <local:RegisterViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Margin="0,60,0,0" HorizontalOptions="Center">
+                    <Image HeightRequest="200" WidthRequest="200" Source="uji.png" />
+                    <Label Text="Daftar penguna" FontSize="Medium" TextColor="CadetBlue" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Margin="40,0,40,0" VerticalOptions="CenterAndExpand">
+                    <Entry Placeholder="Nama" Text="{Binding users.student_name}"/>
+                    <Entry Placeholder="Kelas" Text="{Binding users.student_class}"/>
+                    <Entry Placeholder="Kata laluan" Text="{Binding Password}"/>
+                    <Entry Placeholder="Pengesahan Kata Laluan" x:Name="EntComPassword" IsPassword="True"/>
+
+
+                    <Button Text="Daftar" BackgroundColor="CadetBlue" TextColor="White" CornerRadius="20" HeightRequest="40" x:Name="btnResgister" Command="{Binding RegisterCommand}"/>
+
+
+                </StackLayout>
+
+
+                <ActivityIndicator HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Color="CadetBlue" IsRunning="False" IsVisible="{Binding IsRunning}"/>
+
+            </Grid>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

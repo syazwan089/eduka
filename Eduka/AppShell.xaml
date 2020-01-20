@@ -41,7 +41,7 @@
     </Shell.FlyoutHeaderTemplate>
 
 
-    <FlyoutItem Title="Home"
+    <FlyoutItem Title="Utama"
                 Icon="home.png">
         <Tab>
             <ShellContent>
@@ -50,7 +50,7 @@
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="My Result"
+    <FlyoutItem Title="Prestasi"
                 Icon="cat.png">
         <Tab>
             <ShellContent>

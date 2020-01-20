@@ -1,5 +1,6 @@
 ﻿using Eduka.Models;
 using Eduka.Services;
+using Eduka.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Eduka.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; set; }
+        public Command ToRegisterCommand { get; set; }
         private User user;
 
         public User users
@@ -70,6 +72,12 @@ namespace Eduka.ViewModels
             isBtnEnable = true;
             IsRunning = false;
             LoginCommand = new Command(funct);
+            ToRegisterCommand = new Command(toRegister);
+        }
+
+        private void toRegister(object obj)
+        {
+            App.Current.MainPage.Navigation.PushAsync(new RegisterPage());
         }
 
         private async void funct(object obj)

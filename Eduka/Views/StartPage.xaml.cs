@@ -12,7 +12,7 @@ namespace Eduka.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StartPage : CarouselPage
     {
-        string ResourceImg = "balsamic.Assets.Images.";
+        string ResourceImg = "Eduka.Assets.Images.";
         public StartPage()
         {
             InitializeComponent();

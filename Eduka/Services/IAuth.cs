@@ -8,7 +8,7 @@ namespace Eduka.Services
 {
     public interface IAuth
     {
-        Task<bool> Register(string username, string password, string userclass);
+        Task<string> Register(string username, string password, string userclass);
         Task<User> Login(string userid, string password);
     }
 }

@@ -34,7 +34,7 @@ namespace Eduka.Services
             return null;
         }
 
-        public async Task<bool> Register(string username, string password, string userclass)
+        public async Task<string> Register(string username, string password, string userclass)
         {
             string WowURL = base_url + "register";
             string DIRECT_POST_CONTENT_TYPE = "application/x-www-form-urlencoded";
@@ -51,10 +51,10 @@ namespace Eduka.Services
             if (result != null || result != "false")
             {
 
-                return true;
+                return result;
             }
 
-            return false;
+            return null;
         }
     }
 }

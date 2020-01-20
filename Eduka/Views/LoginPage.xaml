@@ -31,10 +31,9 @@
                         <StackLayout IsVisible="{Binding  IsRunning}">
                             <ActivityIndicator Color="#4AD69E" IsRunning="True"/>
                         </StackLayout>
-
+                        <ActivityIndicator Color="SkyBlue" IsRunning="True" IsVisible="{Binding IsRunning}" IsEnabled="True"/>
                         <StackLayout IsVisible="{Binding  isBtnEnable}">
-                            
-                            <Button Text="sign in" Command="{Binding  LoginCommand}" Style="{StaticResource Btn-Main}"/>
+                            <Button Text="sign in" Command="{Binding  LoginCommand}" IsEnabled="{Binding isBtnEnable}" Style="{StaticResource Btn-Main}"/>
                         </StackLayout>
 
                     </StackLayout>
@@ -46,7 +45,7 @@
                 <Label Text="Masih belum ada akaun?" TextColor="Gray" HorizontalTextAlignment="Center" FontSize="Small"/>
                 <Label Text="Daftar sekarang" HorizontalTextAlignment="Center" Style="{StaticResource Sub-Title-Blue}" FontAttributes="Bold" >
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer/>
+                        <TapGestureRecognizer Command="{Binding ToRegisterCommand}"/>
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>
