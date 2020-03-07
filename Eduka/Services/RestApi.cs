@@ -34,6 +34,30 @@ namespace Eduka.Services
             return null;
         }
 
+
+        public async Task<List<Unit>> GetUnit(string topic_id)
+        {
+            string WowURL = base_url + "get/unit";
+            string DIRECT_POST_CONTENT_TYPE = "application/x-www-form-urlencoded";
+
+            HttpClient client = new HttpClient();
+            string postData = "topic_id=" + topic_id;
+
+            StringContent content = new StringContent(postData, Encoding.UTF8, DIRECT_POST_CONTENT_TYPE);
+            HttpResponseMessage response = await client.PostAsync(WowURL, content);
+
+            string result = await response.Content.ReadAsStringAsync();
+
+
+            if (result != null)
+            {
+                var json = JsonConvert.DeserializeObject<List<Unit>>(result);
+                return json;
+            }
+
+            return null;
+        }
+
         public async Task<List<topic>> GetQuiz(string topic_id)
         {
             string WowURL = base_url + "get/quiz";

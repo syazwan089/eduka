@@ -10,6 +10,8 @@ namespace Eduka.Services
     {
         Task<List<Peta>> GetPeta(string topic_id);
 
+        Task<List<Unit>> GetUnit(string topic_id);
+
         Task<List<topic>> GetQuiz(string topic_id);
 
         Task<List<Soalan>> GetQuizSet(string Quiz_Id);
