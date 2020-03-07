@@ -35,6 +35,27 @@ namespace Eduka.Services
         }
 
 
+        public async Task<List<News>> GetNews()
+        {
+            string WowURL = base_url + "get/news";
+
+            HttpClient client = new HttpClient();   
+    
+            HttpResponseMessage response = await client.GetAsync(WowURL);
+
+            string result = await response.Content.ReadAsStringAsync();
+
+
+            if (result != null)
+            {
+                var json = JsonConvert.DeserializeObject<List<News>>(result);
+                return json;
+            }
+
+            return null;
+        }
+
+
         public async Task<List<Unit>> GetUnit(string topic_id)
         {
             string WowURL = base_url + "get/unit";
