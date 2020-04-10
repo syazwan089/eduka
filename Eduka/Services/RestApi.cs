@@ -147,5 +147,28 @@ namespace Eduka.Services
 
             return null;
         }
+
+        public async Task<bool> PrestasiSubmit(string studentId, string QuizId, string Markah)
+        {
+            string WowURL = base_url + "prestasi";
+            string DIRECT_POST_CONTENT_TYPE = "application/x-www-form-urlencoded";
+
+            HttpClient client = new HttpClient();
+            string postData = "student_id=" + studentId + "&quiz_id=" + QuizId + "&markah=" + Markah;
+
+            StringContent content = new StringContent(postData, Encoding.UTF8, DIRECT_POST_CONTENT_TYPE);
+            HttpResponseMessage response = await client.PostAsync(WowURL, content);
+
+            string result = await response.Content.ReadAsStringAsync();
+
+
+            if (result != null || result != "false")
+            {
+
+                return true;
+            }
+
+            return false;
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Eduka.ViewModels
@@ -61,7 +62,7 @@ namespace Eduka.ViewModels
         }
 
 
-
+        public string QuizIdGlobal { get; set; }
 
         public QuizSetViewModel(string QuizId)
         {
@@ -71,6 +72,7 @@ namespace Eduka.ViewModels
             markah = new int();
             markah = 0;
             current = 0;
+            QuizIdGlobal = QuizId;
             get(QuizId);
             A = new Command(AAnsw);
             B = new Command(BAnsw);
@@ -175,7 +177,7 @@ namespace Eduka.ViewModels
             }
         }
 
-        private void AAnsw(object obj)
+        private async void AAnsw(object obj)
         {
             string answers = obj as string;
             if (Soalan.task_ans == answers)
@@ -189,7 +191,10 @@ namespace Eduka.ViewModels
 
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
+                    await submit_mark(QuizIdGlobal, markah.ToString());
+                    await App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
+                    await App.Current.MainPage.Navigation.PopToRootAsync();
+
                 }
             }
 
@@ -203,9 +208,25 @@ namespace Eduka.ViewModels
 
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
+                    await submit_mark(QuizIdGlobal, markah.ToString());
+                    await  App.Current.MainPage.DisplayAlert("Soalan Tamat", $"Markah anda ialah {markah} / {Total + 1}", "Okay");
+                    await App.Current.MainPage.Navigation.PopToRootAsync();
                 }
             }
+        }
+
+
+        private async Task<bool> submit_mark(string quiz, string markah)
+        {
+            string id = Preferences.Get("userid", "");
+            var result = await _rest.PrestasiSubmit(id,quiz,markah);
+
+            if(result)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
