@@ -21,5 +21,8 @@ namespace Eduka.Services
         Task<List<video>> GetVideo(string Topic_id);
 
         Task<bool> PrestasiSubmit(string studentId, string QuizId, string Markah);
+
+        Task<List<Prestasi>> resultPrestasi(string studentId);
+
     }
 }

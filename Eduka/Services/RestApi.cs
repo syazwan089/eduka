@@ -170,5 +170,28 @@ namespace Eduka.Services
 
             return false;
         }
+
+        public async Task<List<Prestasi>> resultPrestasi(string studentId)
+        {
+            string WowURL = base_url + "prestasi/result";
+            string DIRECT_POST_CONTENT_TYPE = "application/x-www-form-urlencoded";
+
+            HttpClient client = new HttpClient();
+            string postData = "student_id=" + studentId;
+
+            StringContent content = new StringContent(postData, Encoding.UTF8, DIRECT_POST_CONTENT_TYPE);
+            HttpResponseMessage response = await client.PostAsync(WowURL, content);
+
+            string result = await response.Content.ReadAsStringAsync();
+
+
+            if (result != null || result != "false")
+            {
+                var json = JsonConvert.DeserializeObject<List<Prestasi>>(result);
+                return json;
+            }
+
+            return null;
+        }
     }
 }

@@ -54,7 +54,7 @@
                 Icon="cat.png">
         <Tab>
             <ShellContent>
-                <local:UnitPage />
+                <local:PrestasiPage />
             </ShellContent>
         </Tab>
     </FlyoutItem>
